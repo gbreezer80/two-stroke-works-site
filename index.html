@@ -48,17 +48,21 @@
       width: 100%;
       padding: 28px 0;
     }
-   .logo {
-    height: 70px;
-    display: block;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,.6));
-  }
-    .brand {
-      background: rgba(0,0,0,.6);
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.1);
-      backdrop-filter: blur(4px);
+   .brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(0,0,0,.45);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.6));
 }
     .nav-inner {
       display: flex;
@@ -66,10 +70,9 @@
       align-items: center;
     }
 
-    <div class="brand">
 <div class="brand">
   <img src="logo.png" alt="Two Stroke Works logo" class="logo">
-      <div class="brand-location">Flower Mound, Texas</div>
+  <div class="brand-location">Flower Mound, Texas</div>
 </div>
 </div>
 
