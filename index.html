@@ -31,12 +31,11 @@ body {
 .hero {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+    linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.62)),
     url('IMG_7919.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
 }
-
     .container {
       width: 100%;
       max-width: 1180px;
@@ -59,23 +58,40 @@ body {
 }
 
 /* cleaner, less bulky */
+.brand-name {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.brand-location {
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.72);
+}
 .brand {
   display: flex;
   align-items: center;
+  gap: 18px;
 }
-.brand-location {
-  display: none; /* cleaner, more premium */
-}
+    
 .logo {
-  height: 100px;
+  height: 92px;
   width: auto;
   display: block;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
 }
 
 <div class="brand">
   <img src="logo.png" alt="Two Stroke Works logo" class="logo">
-  <div class="brand-location">Flower Mound, Texas</div>
-</div>
+  <div>
+    <div class="brand-name">Two Stroke Works</div>
+    <div class="brand-location">Flower Mound, Texas</div>
+  </div>
 </div>
 
    /* contact button */
@@ -87,8 +103,7 @@ body {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-
-  border: 1px solid rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.18);
   background: rgba(255,255,255,.06);
   color: #fff;
 }
