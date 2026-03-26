@@ -4,301 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Two Stroke Works</title>
-<img src="logo.png" alt="Two Stroke Works logo" class="logo">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
-body {
-  background: #0a0a0a;  /* force dark */
-}
-</div>
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0a0a0a;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #090909;
       color: #ffffff;
     }
 
-    a {
-      color: inherit;
-    }
-.section-title {
-  margin: 16px 0 0;
-  font-size: 46px;
-  line-height: 1.02;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  color: #f3f3f3;
-}
-.hero {
-  min-height: 100vh;
-  background-image:
-  linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.55)),
-    url("engine.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 140px;
-}
-  
-  .hero-content {
-  position: relative;
-  z-index: 2;
-}
+    a { color: inherit; }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,.65) 0%,
-    rgba(0,0,0,.45) 35%,
-    rgba(0,0,0,.2) 65%,
-    rgba(0,0,0,.05) 100%
-  );
-}
-  
-}
-    .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(0,0,0,0.15), rgba(0,0,0,0.65));
-  pointer-events: none;
-}
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 14px 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,.08));
+    }
+
     .container {
       width: 100%;
-      max-width: 1180px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-.nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  padding: 12px 0;   /* ↓ smaller */
-    background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.65),
-    rgba(0,0,0,0)
-}
-    
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 72px;   /* force consistent height */
-}
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 64px;
+    }
 
-/* cleaner, less bulky */
-.brand-name {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #ffffff;
-  white-space: nowrap;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.brand-location {
-  margin-top: 4px;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.72);
-  white-space: nowrap;
-}
+    .logo {
+      height: 58px;
+      width: auto;
+      display: block;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 4px 14px rgba(0,0,0,.45));
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-    
-.hero-content {
-  animation: fadeUp 0.8s ease-out both;
-}
+    .brand-copy {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-    
-.logo {
-  height: 60px;
-  width: auto;
-  display: block;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
-}
-    
-    .about-copy p,
-.contact-copy p {
-  margin: 0 0 18px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: rgba(255,255,255,.84);
-}
-    .gallery-note {
-  color: rgba(255,255,255,.68);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-}
-    .section-dark {
-  background: #111111;
-  border-top: 1px solid rgba(255,255,255,.06);
-}
+    .brand-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.96);
+      line-height: 1;
+    }
 
-.section-black {
-  background: #090909;
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-    
-<div class="brand">
-  <img src="logo.png" alt="Two Stroke Works logo" class="logo">
-  <div>
-    <div class="brand-name">Two Stroke Works</div>
-    <div class="brand-location">Flower Mound, Texas</div>
-  </div>
-</div>
+    .brand-location {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+      line-height: 1;
+    }
 
-   /* contact button */
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.06);
-  color: #ffffff;
-}
+    .nav-link {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      transition: all .2s ease;
+    }
 
-.nav-link:hover {
-  background: #E20A17;
-  border-color: #E20A17;
-}
- .hero-content {
-  max-width: 760px;
-  padding: 90px 0 110px;
-}
+    .nav-link:hover {
+      background: #E20A17;
+      border-color: #E20A17;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background-image:
+        linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.58)),
+        url("engine.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 120px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0,0,0,.58) 0%,
+        rgba(0,0,0,.34) 34%,
+        rgba(0,0,0,.14) 62%,
+        rgba(0,0,0,.04) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 100px 0 120px;
+      animation: fadeUp .8s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .eyebrow {
       display: inline-block;
       margin-bottom: 18px;
       padding: 10px 14px;
       border: 1px solid rgba(226,10,23,.45);
-      background: rgba(226,10,23,.12);
+      background: rgba(226,10,23,.10);
       color: #ff8e95;
       border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: .18em;
     }
 
-h1 {
-  margin: 0;
-  font-size: 80px;
-  line-height: .88;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-}
+    h1 {
+      margin: 0;
+      font-size: 84px;
+      line-height: .88;
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+      color: #ffffff;
+    }
 
-    h1 .accent {
-      display: block;
-      h1 .red {
+    h1 .red {
       color: #E20A17;
-      text-shadow: 0 6px 18px rgba(226,10,23,.35);
-}
+      text-shadow: 0 6px 18px rgba(226,10,23,.30);
     }
 
     .hero-text {
       margin-top: 24px;
-      max-width: 620px;
-      font-size: 19px;
-      line-height: 1.8;
-      color: rgba(255,255,255,.82);
+      max-width: 640px;
+      font-size: 18px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.86);
     }
 
-   .hero-actions {
-  margin-top: 28px;
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
     .btn {
       display: inline-block;
       text-decoration: none;
-      padding: 15px 24px;
+      padding: 16px 26px;
       border-radius: 12px;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      transition: transform .18s ease, opacity .18s ease;
+      transition: all .2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: .96;
+    .btn-primary {
+      position: relative;
+      z-index: 5;
+      background: #E20A17;
+      color: #fff;
+      box-shadow: 0 16px 36px rgba(226,10,23,.35);
     }
 
-.btn-primary {
-  position: relative;
-  z-index: 5;
-  background: #E20A17;
-  color: #fff;
-  box-shadow: 0 16px 36px rgba(226,10,23,.35);
-  transition: all .2s ease;
-  padding: 16px 26px;
-  font-size: 13px;
-  letter-spacing: .14em;
-}
-    
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 48px rgba(226,10,23,.45);
-}
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 48px rgba(226,10,23,.45);
+    }
 
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,.28);
-  background: rgba(255,255,255,.10);
-  color: #ffffff;
-  backdrop-filter: blur(4px);
-  padding: 16px 26px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  border-radius: 12px;
-  transition: all .2s ease;
-}
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(20,20,20,.55);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+    }
 
-.btn-secondary:hover {
-  background: rgba(20,20,20,.55)
-  border-color: rgba(255,255,255,.45);
-  transform: translateY(-2px);
-}
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.16);
+      border-color: rgba(255,255,255,.45);
+      transform: translateY(-2px);
+    }
 
     .section {
       padding: 92px 0;
@@ -306,19 +232,20 @@ h1 {
 
     .section-dark {
       background: #111111;
-      border-top: 1px solid rgba(255,255,255,.08);
+      border-top: 1px solid rgba(255,255,255,.06);
     }
 
     .section-black {
-      background: #0a0a0a;
-      border-top: 1px solid rgba(255,255,255,.08);
+      background: #090909;
+      border-top: 1px solid rgba(255,255,255,.06);
     }
 
     .section-label {
       color: #ff8e95;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: .20em;
       text-transform: uppercase;
     }
 
@@ -327,7 +254,8 @@ h1 {
       font-size: 46px;
       line-height: 1.02;
       text-transform: uppercase;
-      letter-spacing: -0.02em;
+      letter-spacing: -.02em;
+      color: rgba(255,255,255,.94);
     }
 
     .about-grid {
@@ -342,7 +270,7 @@ h1 {
       margin: 0 0 18px;
       font-size: 17px;
       line-height: 1.9;
-      color: rgba(255,255,255,.78);
+      color: rgba(255,255,255,.84);
     }
 
     .gallery-header {
@@ -354,10 +282,11 @@ h1 {
     }
 
     .gallery-note {
-      color: rgba(255,255,255,.45);
+      color: rgba(255,255,255,.68);
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: .16em;
     }
 
     .gallery {
@@ -366,13 +295,13 @@ h1 {
       gap: 22px;
     }
 
- .card {
-  background: #141414;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,.22);
-}
+    .card {
+      background: #141414;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.22);
+    }
 
     .card img {
       width: 100%;
@@ -385,20 +314,21 @@ h1 {
       padding: 22px;
     }
 
-  .card-title {
-  margin: 0;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #f4f4f4;
-}
+    .card-title {
+      margin: 0;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #f4f4f4;
+    }
 
-.card-text {
-  margin-top: 12px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: rgba(255,255,255,.76);
-}
+    .card-text {
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.76);
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr .82fr;
@@ -418,9 +348,10 @@ h1 {
     }
 
     .contact-label {
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: .16em;
       color: rgba(255,255,255,.45);
     }
 
@@ -434,14 +365,17 @@ h1 {
     .footer {
       padding: 28px 24px 42px;
       text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       color: rgba(255,255,255,.42);
-      background: #0a0a0a;
+      background: #090909;
     }
 
     @media (max-width: 980px) {
-      h1 {
-        font-size: 58px;
+      .nav-inner,
+      .gallery-header,
+      .brand-copy {
+        flex-wrap: wrap;
       }
 
       .about-grid,
@@ -450,33 +384,43 @@ h1 {
         grid-template-columns: 1fr;
       }
 
-      .gallery-header,
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
+      h1 {
+        font-size: 58px;
+      }
+
+      .card img {
+        height: 280px;
       }
     }
 
     @media (max-width: 640px) {
+      .logo {
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 22px;
+      }
+
+      .brand-location {
+        font-size: 10px;
+        letter-spacing: .18em;
+      }
+
       h1 {
         font-size: 44px;
       }
 
-      .hero-content {
-        padding: 140px 0 60px;
+      .hero {
+        padding-top: 98px;
       }
 
-      .hero-text {
-        font-size: 17px;
+      .hero-content {
+        padding: 80px 0 100px;
       }
 
       .section-title {
         font-size: 34px;
-      }
-
-      .card img {
-        height: 260px;
       }
     }
   </style>
@@ -486,9 +430,13 @@ h1 {
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <div class="brand-name">Two Stroke Works</div>
-        <div class="brand-location">Flower Mound, Texas</div>
+        <img src="logo.png" alt="Two Stroke Works logo" class="logo">
+        <div class="brand-copy">
+          <div class="brand-name">Two Stroke Works</div>
+          <div class="brand-location">Flower Mound, Texas</div>
+        </div>
       </div>
+
       <a href="#contact" class="nav-link">Contact</a>
     </div>
   </div>
@@ -498,23 +446,21 @@ h1 {
       <div class="hero-content">
         <div class="eyebrow">Vintage Suzuki TS Restorations</div>
         <h1>
-          Preserving
-          <span class="accent">Two-Stroke</span>
+          Preserving<br>
+          <span class="red">Two-Stroke</span><br>
           History
         </h1>
+
         <div class="hero-text">
           Two Stroke Works is a small workshop focused on vintage Suzuki TS motorcycles,
           parts, and restoration work. Clean builds, thoughtful details, and respect for
           the original character of these classic machines.
         </div>
-       <div class="hero-actions">
-  <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">
-    Email Two Stroke Works
-  </a>
-  <a href="#work" class="btn btn-secondary">
-    View Our Work
-  </a>
-</div>
+
+        <div class="hero-actions">
+          <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Email Two Stroke Works</a>
+          <a href="#work" class="btn btn-secondary">View Our Work</a>
+        </div>
       </div>
     </div>
   </section>
