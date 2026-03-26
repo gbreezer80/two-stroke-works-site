@@ -381,6 +381,94 @@
       color: rgba(255,255,255,.76);
     }
 
+.featured-build {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.featured-build-image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #111;
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+}
+
+.featured-build-image {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-build-copy {
+  max-width: 520px;
+}
+
+.featured-build-title {
+  margin-top: 14px;
+}
+
+.featured-build-text {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.82);
+}
+
+.featured-build-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.featured-build-meta span {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.74);
+}
+
+.featured-build-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 980px) {
+  .featured-build {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-build-copy {
+    max-width: none;
+  }
+
+  .featured-build-image {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-build-image {
+    min-height: 320px;
+  }
+}
+
+    
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr .82fr;
@@ -547,6 +635,40 @@
     </div>
   </section>
 
+<section class="section section-dark" id="featured-build">
+  <div class="container featured-build">
+    <div class="featured-build-image-wrap">
+      <img src="bike.jpg" alt="Featured Suzuki TS build" class="featured-build-image">
+    </div>
+
+    <div class="featured-build-copy">
+      <div class="section-label">Featured Build</div>
+      <h2 class="section-title featured-build-title">1970s Suzuki TS Build</h2>
+
+      <p class="featured-build-text">
+        A focused vintage Suzuki TS restoration built around clean factory lines,
+        period-correct character, and the details that make these machines worth preserving.
+      </p>
+
+      <p class="featured-build-text">
+        From parts refinement to final presentation, the goal is simple: build a bike
+        that feels honest, complete, and unmistakably Suzuki.
+      </p>
+
+      <div class="featured-build-meta">
+        <span>Vintage Suzuki TS</span>
+        <span>Factory feel</span>
+        <span>Flower Mound, TX</span>
+      </div>
+
+      <div class="featured-build-actions">
+        <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Ask About A Build</a>
+        <a href="#work" class="btn btn-secondary">View More Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
   <section class="section section-black" id="work">
     <div class="container">
       <div class="gallery-header">
