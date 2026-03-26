@@ -44,7 +44,29 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  .hero {
+  align-items: flex-start;
+  padding-top: 140px;
+}
+
+  .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.45) 35%,
+    rgba(0,0,0,.2) 65%,
+    rgba(0,0,0,.05) 100%
+  );
+}
+  
 }
     .hero::after {
   content: "";
@@ -111,7 +133,7 @@ body {
 }
     
 .logo {
-  height: 82px;
+  height: 72px;
   width: auto;
   display: block;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
@@ -194,7 +216,10 @@ h1 {
 
     h1 .accent {
       display: block;
+      h1 .red {
       color: #E20A17;
+      text-shadow: 0 6px 18px rgba(226,10,23,.35);
+}
     }
 
     .hero-text {
@@ -229,16 +254,16 @@ h1 {
       opacity: .96;
     }
 
-.btn-primary {
+..btn-primary {
   background: #E20A17;
   color: #fff;
-  box-shadow: 0 14px 34px rgba(226,10,23,.28);
+  box-shadow: 0 16px 36px rgba(226,10,23,.35);
   transition: all .2s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(226,10,23,.35);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(226,10,23,.45);
 }
 
 .btn-secondary {
