@@ -30,9 +30,12 @@ body {
 
 .hero {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.62)),
-    url('IMG_7919.jpeg') center/cover no-repeat;
+  background-image:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.58)),
+    url("IMG_7919.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
@@ -55,6 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 /* cleaner, less bulky */
@@ -64,14 +68,16 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .brand-location {
   margin-top: 8px;
   font-size: 12px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,.72);
+  white-space: nowrap;
 }
 .brand {
   display: flex;
@@ -95,7 +101,6 @@ body {
 </div>
 
    /* contact button */
-.nav-link {
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 999px;
@@ -105,14 +110,13 @@ body {
   text-transform: uppercase;
   border: 1px solid rgba(255,255,255,.18);
   background: rgba(255,255,255,.06);
-  color: #fff;
+  color: #ffffff;
 }
 
 .nav-link:hover {
   background: #E20A17;
   border-color: #E20A17;
 }
-
     .hero-content {
       max-width: 760px;
       padding: 120px 0 70px;
