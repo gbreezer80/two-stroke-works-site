@@ -109,7 +109,8 @@
       margin-top: 18px;
       font-size: 13px;
       letter-spacing: 1px;
-      opacity: 0.7;
+      opacity: 0.85; /* was too low before */
+      color: #e6e6e6;
     }
     
     .hero {
@@ -404,6 +405,12 @@
         flex-wrap: wrap;
       }
 
+    @media (min-width: 768px) {
+      .trust-line {
+        margin-top: 22px;
+      }
+    }
+      
       .about-grid,
       .gallery,
       .contact-grid {
