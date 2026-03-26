@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Two Stroke Works</title>
-
+  <p class="trust-line">
+  Specializing in 1970s Suzuki TS restorations • Built in Flower Mound, Texas
+</p>
   <style>
     * { box-sizing: border-box; }
 
@@ -25,14 +27,14 @@
       left: 0;
       width: 100%;
       z-index: 20;
-      padding: 8px 0;
+      padding: 6px 0;
       background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.15),
       rgba(0,0,0,0)
     );
-      backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     }
     
     .container {
@@ -56,7 +58,7 @@
     }
 
     .logo {
-      height: 92px;
+      height: 90px;
       width: auto;
       display: block;
       flex: 0 0 auto;
@@ -106,6 +108,13 @@
       border-color: #E20A17;
     }
 
+    .trust-line {
+      margin-top: 18px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+    
     .hero {
       position: relative;
       min-height: 100vh;
@@ -180,7 +189,8 @@
       margin-top: 24px;
       max-width: 640px;
       font-size: 18px;
-      line-height: 1.85;
+      line-height: 1.05;
+      margin-bottom: 18px;
       color: rgba(255,255,255,.86);
     }
 
@@ -218,14 +228,15 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,.28);
-      background: rgba(20,20,20,.55);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      background: rgba(255,255,255,0.05);
       backdrop-filter: blur(4px);
-      color: #ffffff;
+
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,.16);
+      background: rgba(255,255,255,0.12);
       border-color: rgba(255,255,255,.45);
       transform: translateY(-2px);
     }
