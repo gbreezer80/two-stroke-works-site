@@ -4,11 +4,19 @@
   window.onload = function () {
     window.scrollTo(0, 0);
   };
+
+  <a href="tel:2143948786">214-394-8786</a>
+  <a href="mailto:twostrokeworks@gmail.com">twostrokeworks@gmail.com</a>
+    
 </script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Two Stroke Works</title>
+  <link rel="preload" as="image" href="engine.jpg">
+  <meta name="description" content="Two Stroke Works specializes in vintage Suzuki TS restorations, parts, and motorcycle builds in Flower Mound, Texas.">
+<title>Two Stroke Works | Vintage Suzuki TS Restorations</title>
+  
   <style>
     * { box-sizing: border-box; }
 
@@ -33,12 +41,12 @@
       background: linear-gradient(
       to bottom,
       rgba(0,0,0,0.55),
-      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.18),
       rgba(0,0,0,0)
     );
     backdrop-filter: blur(4px);
     }
-    
+
     .container {
       width: 100%;
       max-width: 1240px;
@@ -50,7 +58,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     min-height: 62px;
+     min-height: 58px;
     }
 
     .brand {
@@ -60,7 +68,7 @@
     }
 
     .logo {
-      height: 90px;
+      height: 86px;
       width: auto;
       display: block;
       flex: 0 0 auto;
@@ -240,15 +248,15 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,.32);
       color: #fff;
-      background: rgba(255,255,255,0.05);
+      background: rgba(20,20,20,.58);
       backdrop-filter: blur(4px);
 
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.14);
       border-color: rgba(255,255,255,.45);
       transform: translateY(-2px);
     }
@@ -524,11 +532,15 @@
       }
 
     @media (min-width: 768px) {
+
       .trust-line {
-        margin-top: 22px;
+        margin-top: 20px;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        color: rgba(255,255,255,.78);
       }
     }
-      
+
       .about-grid,
       .gallery,
       .contact-grid {
@@ -574,8 +586,42 @@
         font-size: 34px;
       }
     }
+
+    @media (max-width: 640px) {
+  h1 {
+    font-size: 52px;
+    line-height: 0.92;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+    
   </style>
 </head>
+
+  <script>
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+  });
+</script>
+  
 <body>
 
   <div class="nav">
@@ -612,9 +658,9 @@
           <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Email Two Stroke Works</a>
           <a href="#work" class="btn btn-secondary">View Our Work</a>
 
-        <p class="trust-line">
-          Focused exclusively on vintage Suzuki TS model restorations
-        </p>
+    <p class="trust-line">
+      Focused exclusively on vintage Suzuki TS restorations
+    </p>
           
         </div>
       </div>
