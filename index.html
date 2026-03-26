@@ -44,7 +44,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  .hero {
   align-items: flex-start;
   padding-top: 140px;
 }
@@ -83,19 +82,28 @@ body {
     }
 
 .nav {
-  padding: 16px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 12px 0;   /* ↓ smaller */
+    background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.65),
+    rgba(0,0,0,0)
 }
     
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  height: 72px;   /* force consistent height */
 }
 
 /* cleaner, less bulky */
 .brand-name {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -104,19 +112,20 @@ body {
 }
 
 .brand-location {
-  margin-top: 8px;
-  font-size: 12px;
+  margin-top: 4px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,.72);
   white-space: nowrap;
 }
+
 .brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
-
+    
 .hero-content {
   animation: fadeUp 0.8s ease-out both;
 }
@@ -133,12 +142,12 @@ body {
 }
     
 .logo {
-  height: 72px;
+  height: 60px;
   width: auto;
   display: block;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
 }
-
+    
     .about-copy p,
 .contact-copy p {
   margin: 0 0 18px;
