@@ -26,7 +26,8 @@
       width: 100%;
       z-index: 20;
       padding: 12px 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,.18));
+      background: rgba(10,10,10,.92);
+      border-bottom: 1px solid rgba(255,255,255,.06);
       backdrop-filter: blur(6px);
     }
 
@@ -45,13 +46,17 @@
     }
 
     .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+    }
 
     .logo {
-      height: 66px;
+      height: 74px;
       width: auto;
       display: block;
       flex: 0 0 auto;
@@ -65,9 +70,9 @@
     }
 
     .brand-name {
-      font-size: 24px;
+      font-size: 25px;
       font-weight: 700;
-      letter-spacing: .04em;
+      letter-spacing: .06em;  /* tighter, more mechanical */
       text-transform: uppercase;
       color: rgba(255,255,255,.96);
       line-height: 1;
@@ -83,18 +88,10 @@
     }
     
     .nav-link {
-      text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.20);
-      background: rgba(255,255,255,.06);
-      transition: all .2s ease;
+      padding: 10px 18px;
+      border-radius: 6px; /* less soft */
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.04);
     }
     
     .nav-link:hover {
