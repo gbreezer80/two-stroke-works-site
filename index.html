@@ -41,28 +41,32 @@
       padding: 0 24px;
     }
 
-    .nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 28px 0;
-    }
-.brand {
-  backdrop-filter: blur(6px);
-}
-
-.logo {
-  height: 90px;   /* increase size */
-  width: auto;
-  display: block;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,.7));
+   .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
 }
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+}
+
+/* cleaner, less bulky */
+.brand {
+  display: flex;
+  align-items: center;
+}
+.brand-location {
+  display: none; /* cleaner, more premium */
+}
+.logo {
+  height: 110px;   /* bigger */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.8));
 }
 
 <div class="brand">
@@ -71,18 +75,27 @@
 </div>
 </div>
 
-    .nav-link {
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+   /* contact button */
+.nav-link {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+
+  transition: all .2s ease;
+}
+
+.nav-link:hover {
+  background: #E20A17;
+  border-color: #E20A17;
+}
 
     .hero-content {
       max-width: 760px;
