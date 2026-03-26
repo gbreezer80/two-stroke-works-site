@@ -1,3 +1,104 @@
-<div class="tagline"> Restoring classic Suzuki TS motorcycles with attention to detail, originality, and craftsmanship. 
-</div> <a href="mailto:yourname@twostrokeworks.com" class="button"> Contact Two Stroke Works 
-</a>
+export default function TwoStrokeWorksSplashPage() {
+  return (
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans">
+
+      {/* HERO */}
+      <section
+        className="relative isolate overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)), url('/engine.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-10">
+
+          <header className="flex justify-between items-center border-b border-white/10 pb-5">
+            <div>
+              <div className="text-xl font-bold uppercase tracking-wide">
+                Two Stroke Works
+              </div>
+              <div className="text-sm text-neutral-400">
+                Flower Mound, Texas
+              </div>
+            </div>
+
+            <a href="#contact" className="text-sm uppercase">
+              Contact
+            </a>
+          </header>
+
+          <div className="flex-1 flex flex-col justify-center items-center text-center">
+
+            <h1 className="text-5xl font-bold text-[#E20A17]">
+              Two Stroke Works
+            </h1>
+
+            <p className="mt-4 text-neutral-300">
+              Vintage Suzuki TS Restorations
+            </p>
+
+            <p className="mt-6 max-w-xl text-neutral-400">
+              Restoring classic Suzuki TS motorcycles with attention to detail,
+              originality, and craftsmanship.
+            </p>
+
+            <a
+              href="mailto:twostrokeworks@gmail.com"
+              className="mt-8 bg-[#E20A17] px-6 py-3 rounded"
+            >
+              Contact Two Stroke Works
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="py-20 text-center px-6">
+        <h2 className="text-3xl font-bold text-[#E20A17]">
+          Preserving Two-Stroke History
+        </h2>
+
+        <p className="mt-6 max-w-2xl mx-auto text-neutral-400">
+          Two Stroke Works is a small workshop based in Flower Mound, Texas,
+          focused on vintage Suzuki TS motorcycles, parts, and restoration work.
+          Clean builds, thoughtful details, and respect for original character.
+        </p>
+      </section>
+
+      {/* GALLERY */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-center text-[#E20A17]">
+          Our Work
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
+
+          <img src="/engine.jpg" className="rounded-lg" />
+          <img src="/bike.jpg" className="rounded-lg" />
+          <img src="/pipes.jpg" className="rounded-lg" />
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-20 text-center px-6">
+        <h2 className="text-3xl font-bold text-[#E20A17]">
+          Contact
+        </h2>
+
+        <p className="mt-6 text-neutral-400">
+          214-394-8786<br/>
+          twostrokeworks@gmail.com
+        </p>
+      </section>
+
+      <footer className="text-center py-10 text-neutral-500">
+        © 2026 Two Stroke Works
+      </footer>
+
+    </div>
+  );
+}
