@@ -13,7 +13,9 @@
     html {
       scroll-behavior: smooth;
     }
-
+body {
+  background: #0a0a0a;  /* force dark */
+}
 </div>
     body {
       margin: 0;
@@ -26,14 +28,14 @@
       color: inherit;
     }
 
-    .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.78)),
-        url('IMG_7919.jpeg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-    }
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+    url('IMG_7919.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
 
     .container {
       width: 100%;
@@ -47,7 +49,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 24px 0;
+  padding: 20px 0;
+  z-index: 10;
 }
 .nav-inner {
   display: flex;
@@ -64,10 +67,9 @@
   display: none; /* cleaner, more premium */
 }
 .logo {
-  height: 110px;   /* bigger */
+  height: 100px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,.8));
 }
 
 <div class="brand">
@@ -79,7 +81,7 @@
    /* contact button */
 .nav-link {
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 10px 18px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;
@@ -87,10 +89,8 @@
   text-transform: uppercase;
 
   border: 1px solid rgba(255,255,255,.2);
-  background: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.06);
   color: #fff;
-
-  transition: all .2s ease;
 }
 
 .nav-link:hover {
