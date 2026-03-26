@@ -46,7 +46,13 @@ body {
   display: flex;
   align-items: center;
 }
-    
+    .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(0,0,0,0.15), rgba(0,0,0,0.65));
+  pointer-events: none;
+}
     .container {
       width: 100%;
       max-width: 1180px;
@@ -54,14 +60,10 @@ body {
       padding: 0 24px;
     }
 
-   .nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  z-index: 10;
+.nav {
+  padding: 16px 0;
 }
+    
 .nav-inner {
   display: flex;
   justify-content: space-between;
@@ -91,6 +93,21 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
+}
+
+.hero-content {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
     
 .logo {
@@ -168,10 +185,10 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 78px;
-  line-height: .90;
+  font-size: 80px;
+  line-height: .88;
   text-transform: uppercase;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.04em;
   color: #ffffff;
 }
 
@@ -216,12 +233,23 @@ h1 {
   background: #E20A17;
   color: #fff;
   box-shadow: 0 14px 34px rgba(226,10,23,.28);
+  transition: all .2s ease;
 }
 
-    .btn-secondary {
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(226,10,23,.35);
+}
+
+.btn-secondary {
   border: 1px solid rgba(255,255,255,.22);
   background: rgba(255,255,255,.08);
   color: #fff;
+  transition: all .2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,.14);
 }
 
     .section {
