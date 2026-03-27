@@ -126,15 +126,23 @@
       color: #e6e6e6;
     }
 
+
 .dual-actions {
   display: flex;
   gap: 12px;
+  margin-top: 18px;
   flex-wrap: wrap;
 }
 
 .dual-actions .btn {
   flex: 1;
   text-align: center;
+  padding: 14px 18px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: all .2s ease;
 }
     
     .hero {
@@ -250,13 +258,15 @@
       z-index: 5;
       background: #E20A17;
       color: #fff;
-      box-shadow: 0 16px 36px rgba(226,10,23,.35);
+      box-shadow: 0 10px 26px rgba(226,10,23,.25);
+      border: 1px solid #E20A17;
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 22px 48px rgba(226,10,23,.45);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(226,10,23,.35);
     }
+
 
     .btn-secondary {
       border: 1px solid rgba(255,255,255,.32);
@@ -271,6 +281,18 @@
       border-color: rgba(255,255,255,.45);
       transform: translateY(-2px);
     }
+
+    .btn-inquire {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #ffffff;
+}
+
+    .btn-inquire:hover {
+      background: rgba(255,255,255,.14);
+      border-color: rgba(255,255,255,.45);
+      transform: translateY(-2px);
+}
     
     .contact-btn {
       border: 1px solid rgba(255,255,255,0.3);
@@ -608,7 +630,15 @@
   }
 }
 
-    
+    @media (max-width: 640px) {
+  .dual-actions {
+    flex-direction: column;
+  }
+
+  .dual-actions .btn {
+    width: 100%;
+  }
+}
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr .82fr;
@@ -1068,7 +1098,9 @@
 </div>
 </div>
   </div>
-    
+
+
+      
 <div class="item-card">
   <img src="Suzuki Build.jpg" alt="Suzuki TS build deposit" class="item-image">
 
