@@ -556,6 +556,97 @@
       width: 100%;
     }
 
+  /* ===================== */
+  /* CURATED ITEMS SHOWCASE */
+  /* ===================== */
+    
+    .showcase-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.showcase-side {
+  display: grid;
+  gap: 24px;
+}
+
+.showcase-card {
+  background: #121212;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.35);
+  border-color: rgba(255,255,255,.14);
+}
+
+.showcase-card-featured {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+  );
+}
+
+.showcase-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.showcase-image-featured {
+  height: 420px;
+}
+
+.showcase-card:hover .showcase-image {
+  transform: scale(1.03);
+}
+
+.showcase-body {
+  padding: 24px;
+}
+
+.showcase-title {
+  margin: 12px 0 0;
+  font-size: 24px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.94);
+}
+
+.showcase-text {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255,255,255,.76);
+}
+
+.showcase-note {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.62);
+}
+
+@media (max-width: 980px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-image-featured {
+    height: 320px;
+  }
+}
+    
     /* ===================== */
     /* WORK GRID */
     /* ===================== */
@@ -871,43 +962,93 @@
   <!-- CURATED ITEMS -->
   <!-- ===================== -->
   <section class="section section-black" id="curated-items">
-    <div class="container">
-      <div class="gallery-header curated-header">
-        <div>
-          <div class="section-label">Curated Items</div>
-          <h2 class="section-title">Selected Parts For Vintage Suzuki TS Builds</h2>
+  <div class="container">
+    <div class="gallery-header curated-header">
+      <div>
+        <div class="section-label">Curated Items</div>
+        <h2 class="section-title">Selected Parts & Builder Offerings</h2>
+      </div>
+      <div class="gallery-note">Limited availability • Direct inquiry or checkout</div>
+    </div>
+
+    <p class="curated-intro">
+      A focused selection of parts, shop goods, and builder offerings aligned with the standards behind our restorations.
+      Chosen carefully, offered selectively, and intended for vintage Suzuki TS enthusiasts.
+    </p>
+
+    <div class="showcase-grid">
+
+      <!-- FEATURED ITEM -->
+      <div class="showcase-card showcase-card-featured">
+        <img src="Suzuki Build.jpg" alt="Suzuki TS build deposit" class="showcase-image showcase-image-featured">
+
+        <div class="showcase-body">
+          <div class="item-category">Builder Offering</div>
+          <h3 class="showcase-title">Build Deposit</h3>
+
+          <p class="showcase-text">
+            Reserve a build slot with Two Stroke Works. This deposit applies toward your project
+            and secures scheduling for restoration or custom Suzuki TS work.
+          </p>
+
+          <p class="showcase-note">
+            Deposit is credited toward final build cost.
+          </p>
+
+          <div class="item-meta">
+            <span>Limited Slots</span>
+            <span>By Approval</span>
+            <span>Specialist Build</span>
+          </div>
+
+          <div class="item-price">$500 Deposit</div>
+
+          <div class="dual-actions">
+            <a href="https://buy.stripe.com/test_6oU4gy3ZOdcM5QBd8o4sE01"
+               class="btn btn-primary"
+               target="_blank"
+               rel="noopener">
+              Reserve Build Slot
+            </a>
+
+            <a href="mailto:twostrokeworks@gmail.com?subject=Build%20Deposit%20Inquiry&body=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20build.%20Can%20we%20talk%20through%20the%20process%3F"
+               class="btn btn-inquire">
+              Inquire
+            </a>
+          </div>
         </div>
-        <div class="gallery-note">Limited availability • Direct inquiry or checkout</div>
       </div>
 
-      <p class="curated-intro">
-        A small selection of parts and shop items chosen for vintage Suzuki TS restorations.
-        Focused, useful, and aligned with the standards behind our builds.
-      </p>
+      <!-- SIDE ITEMS -->
+      <div class="showcase-side">
 
-      <div class="items-grid">
+        <div class="showcase-card">
+          <img src="pipes.jpg" alt="Expansion chambers" class="showcase-image">
 
-        <div class="item-card">
-          <img src="pipes.jpg" alt="Expansion chambers" class="item-image">
-          <div class="item-body">
+          <div class="showcase-body">
             <div class="item-category">Exhaust</div>
-            <h3 class="item-title">Expansion Chambers</h3>
-            <p class="item-text">
-              Vintage-style expansion chambers selected for Suzuki TS builds.
-              Clean fitment, strong visual presence, and period-correct feel.
+            <h3 class="showcase-title">Expansion Chambers</h3>
+
+            <p class="showcase-text">
+              Vintage-style expansion chambers selected for Suzuki TS builds with clean fitment,
+              strong visual presence, and period-correct feel.
             </p>
+
             <div class="item-meta">
               <span>Curated</span>
               <span>Limited</span>
             </div>
+
             <div class="item-price">$295</div>
-            <div class="item-actions dual-actions">
+
+            <div class="dual-actions">
               <a href="https://buy.stripe.com/YOUR_STRIPE_LINK"
                  class="btn btn-primary"
                  target="_blank"
                  rel="noopener">
                 Purchase
               </a>
+
               <a href="mailto:twostrokeworks@gmail.com?subject=Expansion%20Chambers%20Inquiry&body=Hi%2C%20I%E2%80%99m%20interested%20in%20this%20item.%20Is%20it%20still%20available%3F"
                  class="btn btn-inquire">
                 Inquire
@@ -916,26 +1057,32 @@
           </div>
         </div>
 
-        <div class="item-card">
-          <img src="Tshirts.jpg" alt="Two Stroke Works shirts and shop goods" class="item-image">
-          <div class="item-body">
-            <div class="item-category">Shop Items</div>
-            <h3 class="item-title">Decals, Shirts & Shop Goods</h3>
-            <p class="item-text">
-              A small run of branded items for customers, collectors, and vintage Suzuki TS enthusiasts.
+        <div class="showcase-card">
+          <img src="Tshirts.jpg" alt="Two Stroke Works shirts and shop goods" class="showcase-image">
+
+          <div class="showcase-body">
+            <div class="item-category">Shop Goods</div>
+            <h3 class="showcase-title">Decals, Shirts & Shop Goods</h3>
+
+            <p class="showcase-text">
+              Small-run branded goods for customers, collectors, and vintage Suzuki TS enthusiasts.
             </p>
+
             <div class="item-meta">
               <span>Merch</span>
               <span>Limited Run</span>
             </div>
+
             <div class="item-price">$19</div>
-            <div class="item-actions dual-actions">
+
+            <div class="dual-actions">
               <a href="https://buy.stripe.com/test_aFabJ0gMAc8Ifrb8S84sE00"
                  class="btn btn-primary"
                  target="_blank"
                  rel="noopener">
                 Purchase
               </a>
+
               <a href="mailto:twostrokeworks@gmail.com?subject=T%20Shirt%20Inquiry&body=Hi%2C%20I%E2%80%99m%20interested%20in%20this%20item.%20Is%20it%20still%20available%3F"
                  class="btn btn-inquire">
                 Inquire
@@ -944,37 +1091,10 @@
           </div>
         </div>
 
-        <div class="item-card">
-          <img src="Suzuki Build.jpg" alt="Suzuki TS build deposit" class="item-image">
-          <div class="item-body">
-            <div class="item-category">Build</div>
-            <h3 class="item-title">Build Deposit</h3>
-            <p class="item-text">
-              Reserve a build slot with Two Stroke Works. Deposit applies toward
-              your project and secures scheduling for restoration or custom work.
-            </p>
-            <p class="item-text" style="margin-top:10px; font-size:13px; opacity:.75;">
-              Deposit is credited toward final build cost.
-            </p>
-            <div class="item-meta">
-              <span>Limited Slots</span>
-              <span>By Approval</span>
-            </div>
-            <div class="item-price">$500 Deposit</div>
-            <div class="item-actions">
-              <a href="https://buy.stripe.com/test_6oU4gy3ZOdcM5QBd8o4sE01"
-                 class="btn btn-primary"
-                 target="_blank"
-                 rel="noopener">
-                Reserve Build Slot
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===================== -->
   <!-- WORK -->
