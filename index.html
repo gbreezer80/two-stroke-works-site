@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-  window.onload = function () {
-    window.scrollTo(0, 0);
-  };
-  <a href="tel:2143948786">214-394-8786</a>
-    
-  <a href="mailto:twostrokeworks@gmail.com">twostrokeworks@gmail.com</a>
-
-</script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Two Stroke Works</title>
-  <link rel="preload" as="image" href="engine.jpg">
-  <meta name="description" content="Two Stroke Works specializes in vintage Suzuki TS restorations, parts, and motorcycle builds in Flower Mound, Texas.">
-<title>Two Stroke Works | Vintage Suzuki TS Restorations</title>
-  
+  <title>Two Stroke Works | Vintage Suzuki TS Restorations</title>
+  <meta
+    name="description"
+    content="Two Stroke Works specializes in vintage Suzuki TS restorations, curated parts, and motorcycle builds in Flower Mound, Texas."
+  />
+  <link rel="preload" as="image" href="engine.jpg" />
+
   <style>
+    /* ===================== */
+    /* BASE */
+    /* ===================== */
+
     * { box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
@@ -29,22 +26,14 @@
       color: #ffffff;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 20;
-      padding: 6px 0;
-      background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.18),
-      rgba(0,0,0,0)
-    );
-    backdrop-filter: blur(4px);
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -54,43 +43,60 @@
       padding: 0 24px;
     }
 
+    /* ===================== */
+    /* HEADER */
+    /* ===================== */
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 8px 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.18),
+        rgba(0,0,0,0)
+      );
+      backdrop-filter: blur(5px);
+    }
+
     .nav-inner {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     min-height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      min-height: 58px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 16px;
+      min-width: 0;
     }
 
     .logo {
-      height: 86px;
+      height: 90px;
       width: auto;
-      display: block;
       flex: 0 0 auto;
       filter: drop-shadow(0 5px 14px rgba(0,0,0,.45));
     }
-    
-    .brand-text h1 {
-      font-size: 22px;
-      letter-spacing: 2.5px;
-    }
-    
+
     .brand-stack {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 4px;
+      min-width: 0;
     }
 
     .brand-name {
       font-size: 25px;
       font-weight: 700;
-      letter-spacing: .06em;  /* tighter, more mechanical */
+      letter-spacing: .06em;
       text-transform: uppercase;
       color: rgba(255,255,255,.96);
       line-height: 1;
@@ -99,114 +105,48 @@
     .brand-location {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
-      letter-spacing: 3px;
-      opacity: 0.7;
+      letter-spacing: .22em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.62);
+      color: rgba(255,255,255,.70);
       line-height: 1;
     }
-    
+
     .nav-link {
+      flex: 0 0 auto;
       padding: 10px 18px;
-      border-radius: 6px; /* less soft */
-      border: 1px solid rgba(255,255,255,.25);
-      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.30);
+      background: rgba(255,255,255,.05);
+      transition: all .2s ease;
     }
-    
+
     .nav-link:hover {
-      background: #E20A17;
-      border-color: #E20A17;
+      background: rgba(255,255,255,.10);
+      border-color: rgba(255,255,255,.45);
     }
 
-    .trust-line {
-      margin-top: 18px;
-      font-size: 13px;
-      letter-spacing: 1px;
-      opacity: 0.85; /* was too low before */
-      color: #e6e6e6;
-    }
+    /* ===================== */
+    /* HERO */
+    /* ===================== */
 
-.dual-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.dual-actions .btn {
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 54px;
-  padding: 0 18px;
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1;
-  box-sizing: border-box;
-}
-
-.dual-actions .btn-primary {
-  background: #E20A17;
-  color: #fff;
-  border: 1px solid #E20A17;
-  box-shadow: 0 10px 26px rgba(226,10,23,.25);
-}
-
-.dual-actions .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(226,10,23,.35);
-}
-
-.dual-actions .btn-inquire {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.22);
-  color: #ffffff;
-}
-
-.dual-actions .btn-inquire:hover {
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.35);
-  transform: translateY(-2px);
-}
-
-.btn-inquire {
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,.06),
-    rgba(255,255,255,.03)
-  );
-  border: 1px solid rgba(255,255,255,.20);
-  color: #ffffff;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-}
-
-    
-@media (max-width: 640px) {
-  .dual-actions {
-    flex-direction: column;
-  }
-
-  .dual-actions .btn {
-    width: 100%;
-  }
-}
-  
     .hero {
       position: relative;
       min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 118px;
       background-image:
-        linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.58)),
+        linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.58)),
         url("engine.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      display: flex;
-      align-items: flex-start;
-      padding-top: 120px;
     }
 
     .hero::before {
@@ -222,27 +162,24 @@
       );
       pointer-events: none;
     }
-    
-    .hero-subtext::before {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: rgba(255,255,255,0.25);
-      margin-bottom: 10px;
-    }
-    
+
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 760px;
-      padding: 100px 0 120px;
+      padding: 110px 0 120px;
       animation: fadeUp .8s ease-out both;
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .eyebrow {
@@ -263,7 +200,7 @@
     h1 {
       margin: 0;
       font-size: 84px;
-      line-height: .88;
+      line-height: .90;
       text-transform: uppercase;
       letter-spacing: -.04em;
       color: #ffffff;
@@ -278,8 +215,7 @@
       margin-top: 24px;
       max-width: 640px;
       font-size: 18px;
-      line-height: 1.05;
-      margin-bottom: 18px;
+      line-height: 1.85;
       color: rgba(255,255,255,.86);
     }
 
@@ -290,29 +226,40 @@
       flex-wrap: wrap;
     }
 
-/* ===================== */
-/* BUTTON STYLES */
-/* ===================== */
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 16px 26px;
-      border-radius: 12px;
-      font-family: Arial, Helvetica, sans-serif;
+    .trust-line {
+      margin-top: 20px;
       font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,.78);
+    }
+
+    /* ===================== */
+    /* BUTTONS */
+    /* ===================== */
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: .14em;
       text-transform: uppercase;
+      line-height: 1;
       transition: all .2s ease;
+      box-sizing: border-box;
     }
 
     .btn-primary {
-      position: relative;
-      z-index: 5;
       background: #E20A17;
       color: #fff;
-      box-shadow: 0 10px 26px rgba(226,10,23,.25);
       border: 1px solid #E20A17;
+      box-shadow: 0 10px 26px rgba(226,10,23,.25);
     }
 
     .btn-primary:hover {
@@ -320,51 +267,43 @@
       box-shadow: 0 16px 36px rgba(226,10,23,.35);
     }
 
-
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,.32);
-      color: #fff;
-      background: rgba(20,20,20,.58);
-      backdrop-filter: blur(4px);
-
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(20,20,20,.55);
+      color: #ffffff;
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,.14);
       border-color: rgba(255,255,255,.45);
       transform: translateY(-2px);
     }
 
     .btn-inquire {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.25);
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.03)
+      );
+      border: 1px solid rgba(255,255,255,.20);
       color: #ffffff;
-}
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+    }
 
     .btn-inquire:hover {
-      background: rgba(255,255,255,.14);
-      border-color: rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      border-color: rgba(255,255,255,.35);
       transform: translateY(-2px);
-}
-    
-    .contact-btn {
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 10px 18px;
-      border-radius: 999px;
-      letter-spacing: 1px;
-      font-size: 12px;
-      transition: all .2s ease;
     }
-    
-    .contact-btn:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.4);
-    }
-    
+
+    /* ===================== */
+    /* SECTIONS */
+    /* ===================== */
+
     .section {
       padding: 92px 0;
     }
-    
+
     .section-dark {
       background: #111111;
       border-top: 1px solid rgba(255,255,255,.06);
@@ -392,12 +331,27 @@
       letter-spacing: -.02em;
       color: rgba(255,255,255,.94);
     }
-    
-    .section-tag {
-      color: rgba(255,255,255,0.5);
-      font-size: 11px;
-      letter-spacing: 0.12em;
+
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 30px;
     }
+
+    .gallery-note {
+      color: rgba(255,255,255,.68);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    /* ===================== */
+    /* ABOUT */
+    /* ===================== */
+
     .about-grid {
       display: grid;
       grid-template-columns: .95fr 1.05fr;
@@ -412,26 +366,199 @@
       line-height: 1.9;
       color: rgba(255,255,255,.84);
     }
-    
-    .header {
-      padding: 12px 32px;  /* was likely 20–30px */
-    }
-    
-    .gallery-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 24px;
-      margin-bottom: 30px;
+
+    /* ===================== */
+    /* FEATURED BUILD */
+    /* ===================== */
+
+    .featured-build {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
     }
 
-    .gallery-note {
-      color: rgba(255,255,255,0.5);
+    .featured-build-image-wrap {
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #111;
+      box-shadow: 0 18px 40px rgba(0,0,0,.28);
+    }
+
+    .featured-build-image {
+      width: 100%;
+      min-height: 520px;
+      object-fit: cover;
+    }
+
+    .featured-build-copy {
+      max-width: 520px;
+    }
+
+    .featured-build-title {
+      margin-top: 14px;
+    }
+
+    .featured-build-text {
+      margin-top: 18px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.82);
+    }
+
+    .featured-build-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .featured-build-meta span {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      letter-spacing: .12em;
+      color: rgba(255,255,255,.74);
     }
+
+    .featured-build-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    /* ===================== */
+    /* CURATED ITEMS */
+    /* ===================== */
+
+    .curated-header {
+      margin-bottom: 18px;
+    }
+
+    .curated-intro {
+      max-width: 760px;
+      margin: 0 0 34px;
+      font-size: 17px;
+      line-height: 1.85;
+      color: rgba(255,255,255,.80);
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .item-card {
+      background: #121212;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.22);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0,0,0,.35);
+      border-color: rgba(255,255,255,.14);
+    }
+
+    .item-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .item-card:hover .item-image {
+      transform: scale(1.03);
+    }
+
+    .item-body {
+      padding: 22px;
+    }
+
+    .item-category {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #ff8e95;
+    }
+
+    .item-title {
+      margin: 12px 0 0;
+      font-size: 22px;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: rgba(255,255,255,.94);
+    }
+
+    .item-text {
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.74);
+    }
+
+    .item-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .item-meta span {
+      display: inline-block;
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+    }
+
+    .item-price {
+      margin-top: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255,255,255,.92);
+    }
+
+    .item-actions {
+      margin-top: 18px;
+    }
+
+    .dual-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .dual-actions .btn {
+      flex: 1;
+      width: 100%;
+    }
+
+    /* ===================== */
+    /* WORK GRID */
+    /* ===================== */
 
     .gallery {
       display: grid;
@@ -440,8 +567,8 @@
     }
 
     .card {
-      background: #111; /* slightly lifted from pure black */
-      border: 1px solid rgba(255,255,255,0.06);
+      background: #141414;
+      border: 1px solid rgba(255,255,255,.08);
       border-radius: 22px;
       overflow: hidden;
       box-shadow: 0 10px 28px rgba(0,0,0,.22);
@@ -449,16 +576,19 @@
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-6px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     }
-    
+
     .card img {
       width: 100%;
       height: 340px;
       object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
+      transition: transform .4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.03);
     }
 
     .card-body {
@@ -470,7 +600,7 @@
       font-size: 22px;
       text-transform: uppercase;
       letter-spacing: .06em;
-      color: rgba(255,255,255,0.9); /* bump up */
+      color: rgba(255,255,255,.90);
     }
 
     .card-text {
@@ -480,215 +610,9 @@
       color: rgba(255,255,255,.76);
     }
 
-    <!-- ===================== -->
-<!-- FEATURED Build -->
-<!-- ===================== -->
-    
-.featured-build {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.featured-build-image-wrap {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: #111;
-  box-shadow: 0 18px 40px rgba(0,0,0,.28);
-}
-
-.featured-build-image {
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
-  display: block;
-}
-
-.featured-build-copy {
-  max-width: 520px;
-}
-
-.featured-build-title {
-  margin-top: 14px;
-}
-
-.featured-build-text {
-  margin-top: 18px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: rgba(255,255,255,.82);
-}
-
-.featured-build-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.featured-build-meta span {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.74);
-}
-
-.featured-build-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-<!-- ===================== -->
-<!-- CURATED ITEMS (SHOP) -->
-<!-- ===================== -->
-
-.curated-header {
-  margin-bottom: 18px;
-}
-
-.curated-intro {
-  max-width: 760px;
-  margin: 0 0 34px;
-  font-size: 17px;
-  line-height: 1.85;
-  color: rgba(255,255,255,.80);
-}
-
-.items-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.item-card {
-  background: #121212;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,.22);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-
-.item-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,.35);
-  border-color: rgba(255,255,255,.14);
-}
-
-.item-image {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  transition: transform .4s ease;
-}
-
-.item-card:hover .item-image {
-  transform: scale(1.03);
-}
-
-.item-body {
-  padding: 22px;
-}
-
-.item-category {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: #ff8e95;
-}
-
-.item-title {
-  margin: 12px 0 0;
-  font-size: 22px;
-  line-height: 1.15;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: rgba(255,255,255,.94);
-}
-
-.item-text {
-  margin-top: 12px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: rgba(255,255,255,.74);
-}
-
-.item-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.item-meta span {
-  display: inline-block;
-  padding: 8px 11px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.68);
-}
-
-.item-actions {
-  margin-top: 20px;
-}
-
-@media (max-width: 980px) {
-  .items-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .items-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .item-image {
-    height: 220px;
-  }
-}
-    
-@media (max-width: 980px) {
-  .featured-build {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-build-copy {
-    max-width: none;
-  }
-
-  .featured-build-image {
-    min-height: 420px;
-  }
-}
-
-@media (max-width: 640px) {
-  .featured-build-image {
-    min-height: 320px;
-  }
-}
+    /* ===================== */
+    /* CONTACT */
+    /* ===================== */
 
     .contact-grid {
       display: grid;
@@ -723,6 +647,15 @@
       color: #fff;
     }
 
+    .contact-value a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===================== */
+    /* FOOTER */
+    /* ===================== */
+
     .footer {
       padding: 28px 24px 42px;
       text-align: center;
@@ -732,27 +665,21 @@
       background: #090909;
     }
 
+    /* ===================== */
+    /* RESPONSIVE */
+    /* ===================== */
+
     @media (max-width: 980px) {
-      .nav-inner,
-      .gallery-header,
-      .brand-copy {
-        flex-wrap: wrap;
-      }
-
-    @media (min-width: 768px) {
-
-      .trust-line {
-        margin-top: 20px;
-        font-size: 13px;
-        letter-spacing: 0.04em;
-        color: rgba(255,255,255,.78);
-      }
-    }
-
       .about-grid,
+      .featured-build,
+      .items-grid,
       .gallery,
       .contact-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-header {
+        flex-wrap: wrap;
       }
 
       h1 {
@@ -762,24 +689,33 @@
       .card img {
         height: 280px;
       }
+
+      .featured-build-image {
+        min-height: 420px;
+      }
     }
 
     @media (max-width: 640px) {
+      .nav {
+        padding: 8px 0;
+      }
+
       .logo {
-        height: 48px;
+        height: 68px;
       }
 
       .brand-name {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       .brand-location {
         font-size: 10px;
-        letter-spacing: .18em;
+        letter-spacing: .16em;
       }
 
       h1 {
-        font-size: 44px;
+        font-size: 48px;
+        line-height: .92;
       }
 
       .hero {
@@ -790,49 +726,42 @@
         padding: 80px 0 100px;
       }
 
+      .hero-text {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .hero-actions,
+      .featured-build-actions,
+      .dual-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
       .section-title {
         font-size: 34px;
       }
+
+      .item-image {
+        height: 220px;
+      }
+
+      .featured-build-image {
+        min-height: 320px;
+      }
     }
-
-    @media (max-width: 640px) {
-  h1 {
-    font-size: 52px;
-    line-height: 0.92;
-  }
-
-  .hero-text {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-    
   </style>
 </head>
-
-  
-  <script>
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-
-  window.addEventListener("load", function () {
-    window.scrollTo(0, 0);
-  });
-</script>
-  
 <body>
 
+  <!-- ===================== -->
+  <!-- HEADER -->
+  <!-- ===================== -->
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand">
@@ -842,19 +771,19 @@
           <div class="brand-location">Flower Mound, Texas</div>
         </div>
       </div>
-  
+
       <a href="#contact" class="nav-link">Contact</a>
     </div>
   </div>
 
-<!-- ===================== -->
-<!-- HERO SECTION -->
-<!-- ===================== -->
-  
+  <!-- ===================== -->
+  <!-- HERO -->
+  <!-- ===================== -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="eyebrow">Vintage Suzuki TS Restorations</div>
+
         <h1>
           Preserving<br>
           <span class="red">Two-Stroke</span><br>
@@ -870,16 +799,18 @@
         <div class="hero-actions">
           <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Email Two Stroke Works</a>
           <a href="#work" class="btn btn-secondary">View Our Work</a>
-
-    <p class="trust-line">
-      Focused exclusively on vintage Suzuki TS restorations
-    </p>
-          
         </div>
+
+        <p class="trust-line">
+          Focused exclusively on vintage Suzuki TS restorations
+        </p>
       </div>
     </div>
   </section>
-  
+
+  <!-- ===================== -->
+  <!-- ABOUT -->
+  <!-- ===================== -->
   <section class="section section-dark" id="about">
     <div class="container about-grid">
       <div>
@@ -899,310 +830,155 @@
     </div>
   </section>
 
-<section class="section section-dark" id="featured-build">
-  <div class="container featured-build">
-    <div class="featured-build-image-wrap">
-      <img src="TS90.jpeg" alt="Featured Suzuki TS build" class="featured-build-image">
+  <!-- ===================== -->
+  <!-- FEATURED BUILD -->
+  <!-- ===================== -->
+  <section class="section section-dark" id="featured-build">
+    <div class="container featured-build">
+      <div class="featured-build-image-wrap">
+        <img src="TS90.jpeg" alt="Featured Suzuki TS build" class="featured-build-image">
+      </div>
+
+      <div class="featured-build-copy">
+        <div class="section-label">Featured Build</div>
+        <h2 class="section-title featured-build-title">1970 TS90</h2>
+
+        <p class="featured-build-text">
+          A focused vintage Suzuki TS90 restoration built around clean factory lines,
+          period-correct character, 80% NOS parts and the details that make these machines worth preserving.
+        </p>
+
+        <p class="featured-build-text">
+          From parts refinement to final presentation, the goal is simple: build a bike
+          that feels honest, complete, and unmistakably Suzuki.
+        </p>
+
+        <div class="featured-build-meta">
+          <span>Vintage Suzuki TS</span>
+          <span>Factory Feel</span>
+          <span>Two-Stroke Smell</span>
+        </div>
+
+        <div class="featured-build-actions">
+          <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Ask About A Build</a>
+          <a href="#work" class="btn btn-secondary">View More Work</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="featured-build-copy">
-      <div class="section-label">Featured Build</div>
-      <h2 class="section-title featured-build-title">1970 TS90</h2>
+  <!-- ===================== -->
+  <!-- CURATED ITEMS -->
+  <!-- ===================== -->
+  <section class="section section-black" id="curated-items">
+    <div class="container">
+      <div class="gallery-header curated-header">
+        <div>
+          <div class="section-label">Curated Items</div>
+          <h2 class="section-title">Selected Parts For Vintage Suzuki TS Builds</h2>
+        </div>
+        <div class="gallery-note">Limited availability • Direct inquiry or checkout</div>
+      </div>
 
-      <p class="featured-build-text">
-        A focused vintage Suzuki TS90 restoration built around clean factory lines,
-        period-correct character, 80% NOS parts and the details that make these machines worth preserving.
+      <p class="curated-intro">
+        A small selection of parts and shop items chosen for vintage Suzuki TS restorations.
+        Focused, useful, and aligned with the standards behind our builds.
       </p>
 
-      <p class="featured-build-text">
-        From parts refinement to final presentation, the goal is simple: build a bike
-        that feels honest, complete, and unmistakably Suzuki.
-      </p>
+      <div class="items-grid">
 
-      <div class="featured-build-meta">
-        <span>Vintage Suzuki TS</span>
-        <span>Factory feel</span>
-        <span>Two Stroke Smell</span>
-      </div>
+        <div class="item-card">
+          <img src="pipes.jpg" alt="Expansion chambers" class="item-image">
+          <div class="item-body">
+            <div class="item-category">Exhaust</div>
+            <h3 class="item-title">Expansion Chambers</h3>
+            <p class="item-text">
+              Vintage-style expansion chambers selected for Suzuki TS builds.
+              Clean fitment, strong visual presence, and period-correct feel.
+            </p>
+            <div class="item-meta">
+              <span>Curated</span>
+              <span>Limited</span>
+            </div>
+            <div class="item-price">$295</div>
+            <div class="item-actions dual-actions">
+              <a href="https://buy.stripe.com/YOUR_STRIPE_LINK"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener">
+                Purchase
+              </a>
+              <a href="mailto:twostrokeworks@gmail.com?subject=Expansion%20Chambers%20Inquiry&body=Hi%2C%20I%E2%80%99m%20interested%20in%20this%20item.%20Is%20it%20still%20available%3F"
+                 class="btn btn-inquire">
+                Inquire
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <div class="featured-build-actions">
-        <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Ask About A Build</a>
-        <a href="#work" class="btn btn-secondary">View More Work</a>
+        <div class="item-card">
+          <img src="Tshirts.jpg" alt="Two Stroke Works shirts and shop goods" class="item-image">
+          <div class="item-body">
+            <div class="item-category">Shop Items</div>
+            <h3 class="item-title">Decals, Shirts & Shop Goods</h3>
+            <p class="item-text">
+              A small run of branded items for customers, collectors, and vintage Suzuki TS enthusiasts.
+            </p>
+            <div class="item-meta">
+              <span>Merch</span>
+              <span>Limited Run</span>
+            </div>
+            <div class="item-price">$19</div>
+            <div class="item-actions dual-actions">
+              <a href="https://buy.stripe.com/test_aFabJ0gMAc8Ifrb8S84sE00"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener">
+                Purchase
+              </a>
+              <a href="mailto:twostrokeworks@gmail.com?subject=T%20Shirt%20Inquiry&body=Hi%2C%20I%E2%80%99m%20interested%20in%20this%20item.%20Is%20it%20still%20available%3F"
+                 class="btn btn-inquire">
+                Inquire
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="Suzuki Build.jpg" alt="Suzuki TS build deposit" class="item-image">
+          <div class="item-body">
+            <div class="item-category">Build</div>
+            <h3 class="item-title">Build Deposit</h3>
+            <p class="item-text">
+              Reserve a build slot with Two Stroke Works. Deposit applies toward
+              your project and secures scheduling for restoration or custom work.
+            </p>
+            <p class="item-text" style="margin-top:10px; font-size:13px; opacity:.75;">
+              Deposit is credited toward final build cost.
+            </p>
+            <div class="item-meta">
+              <span>Limited Slots</span>
+              <span>By Approval</span>
+            </div>
+            <div class="item-price">$500 Deposit</div>
+            <div class="item-actions">
+              <a href="https://buy.stripe.com/test_6oU4gy3ZOdcM5QBd8o4sE01"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener">
+                Reserve Build Slot
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="section section-black" id="curated-items">
-  <div class="container">
-    <div class="gallery-header curated-header">
-      <div>
-        <div class="section-label">Curated Items</div>
-        <h2 class="section-title">Selected Parts For Vintage Suzuki TS Builds</h2>
-      </div>
-      <div class="gallery-note">Limited availability • Direct inquiry or checkout</div>
-    </div>
-
-    <p class="curated-intro">
-      A small selection of parts and shop items chosen for vintage Suzuki TS restorations.
-      Focused, useful, and aligned with the standards behind our builds.
-    </p>
-
-
-    <!-- ITEM: Expansion Chambers -->
-
-    
-    <div class="items-grid">
-      <div class="item-card">
-        <img src="pipes.jpg" alt="Expansion chambers" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Exhaust</div>
-          <h3 class="item-title">Expansion Chambers</h3>
-          <p class="item-text">Vintage-style chambers selected for period-correct TS builds and strong visual presence.</p>
-          <div class="item-meta">
-            <span>Curated</span>
-            <span>Limited</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Expansion%20Chambers" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="engine.jpg" alt="Cylinder head and engine parts" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Engine</div>
-          <h3 class="item-title">Cylinder & Top-End Components</h3>
-          <p class="item-text">Carefully selected top-end parts suited for rebuilds that respect original character and fitment.</p>
-          <div class="item-meta">
-            <span>Engine</span>
-            <span>TS Focused</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Cylinder%20and%20Top-End%20Components" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="bike.jpg" alt="Fuel tank and body components" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Body</div>
-          <h3 class="item-title">Fuel Tanks & Side Covers</h3>
-          <p class="item-text">Body pieces chosen for clean lines, correct shape, and strong restoration potential.</p>
-          <div class="item-meta">
-            <span>Bodywork</span>
-            <span>Vintage</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Fuel%20Tanks%20and%20Side%20Covers" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="pipes.jpg" alt="Mufflers and silencers" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Exhaust</div>
-          <h3 class="item-title">Silencers & Muffler Assemblies</h3>
-          <p class="item-text">Supporting exhaust pieces selected to complement vintage TS setups and preserve the right overall feel.</p>
-          <div class="item-meta">
-            <span>Exhaust</span>
-            <span>Restoration</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Silencers%20and%20Muffler%20Assemblies" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="bike.jpg" alt="Seats and trim" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Trim</div>
-          <h3 class="item-title">Seats & Trim Pieces</h3>
-          <p class="item-text">Finishing parts that help a build feel complete, honest, and visually correct.</p>
-          <div class="item-meta">
-            <span>Finishing</span>
-            <span>Curated</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Seats%20and%20Trim%20Pieces" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="engine.jpg" alt="Carburetor and intake parts" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Fuel</div>
-          <h3 class="item-title">Carburetors & Intake Parts</h3>
-          <p class="item-text">Intake components selected for vintage TS applications where function and period feel both matter.</p>
-          <div class="item-meta">
-            <span>Fuel System</span>
-            <span>TS Specific</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Carburetors%20and%20Intake%20Parts" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="bike.jpg" alt="Forks and suspension parts" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Chassis</div>
-          <h3 class="item-title">Forks & Suspension Components</h3>
-          <p class="item-text">Suspension-related parts curated for clean chassis presentation and dependable vintage setup work.</p>
-          <div class="item-meta">
-            <span>Chassis</span>
-            <span>Builder Select</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Forks%20and%20Suspension%20Components" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="engine.jpg" alt="Controls and levers" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Controls</div>
-          <h3 class="item-title">Levers, Controls & Small Hardware</h3>
-          <p class="item-text">The details that often make the difference between a rough build and a complete one.</p>
-          <div class="item-meta">
-            <span>Details</span>
-            <span>Hardware</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Levers%2C%20Controls%20and%20Small%20Hardware" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-<div class="item-card">
-        <img src="engine.jpg" alt="Controls and levers" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Controls</div>
-          <h3 class="item-title">Levers, Controls & Small Hardware</h3>
-          <p class="item-text">The details that often make the difference between a rough build and a complete one.</p>
-          <div class="item-meta">
-            <span>Details</span>
-            <span>Hardware</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Levers%2C%20Controls%20and%20Small%20Hardware" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item-card">
-        <img src="engine.jpg" alt="Controls and levers" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Controls</div>
-          <h3 class="item-title">Levers, Controls & Small Hardware</h3>
-          <p class="item-text">The details that often make the difference between a rough build and a complete one.</p>
-          <div class="item-meta">
-            <span>Details</span>
-            <span>Hardware</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Levers%2C%20Controls%20and%20Small%20Hardware" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="item-card">
-        <img src="pipes.jpg" alt="Wheels and hubs" class="item-image">
-        <div class="item-body">
-          <div class="item-category">Rolling Chassis</div>
-          <h3 class="item-title">Wheels, Hubs & Brake Pieces</h3>
-          <p class="item-text">Curated rolling chassis parts for builds where finish quality and visual correctness matter.</p>
-          <div class="item-meta">
-            <span>Wheels</span>
-            <span>Hubs</span>
-          </div>
-          <div class="item-actions">
-            <a href="mailto:twostrokeworks@gmail.com?subject=Wheels%2C%20Hubs%20and%20Brake%20Pieces" class="btn btn-primary">Inquire</a>
-          </div>
-        </div>
-      </div>
-
-
-<div class="item-card">
-  <img src="Tshirts.jpg" alt="Shop merchandise and decals" class="item-image">
-  <div class="item-body">
-          <div class="item-category">Shop Items</div>
-          <h3 class="item-title">Decals, Shirts & Shop Goods</h3>
-          <p class="item-text">A small run of branded items for customers, collectors, and vintage Suzuki TS enthusiasts.</p>
-          <div class="item-meta">
-            <span>Merch</span>
-            <span>Limited Run</span>
-          </div>
-    <div class="item-price" style="margin-top:14px; font-weight:700;">
-      $19
-    </div>
-
-    <div class="item-actions dual-actions">
-  <a href="https://buy.stripe.com/test_aFabJ0gMAc8Ifrb8S84sE00"
-     class="btn btn-primary"
-     target="_blank"
-     rel="noopener">
-    Purchase
-  </a>
-  <a href="mailto:twostrokeworks@gmail.com?subject=T%20Shirt%20Inquiry&body=Hi%2C%20I’m%20interested%20in%20this%20item.%20Is%20it%20still%20available%3F"
-     class="btn btn-secondary">
-    Inquire
-  </a>
-</div>
-</div>
-</div>
-
-      
-<div class="item-card">
-  <img src="Suzuki Build.jpg" alt="Suzuki TS build deposit" class="item-image">
-
-  <div class="item-body">
-    <div class="item-category">Build</div>
-
-    <h3 class="item-title">Build Deposit</h3>
-
-    <p class="item-text">
-      Reserve a build slot with Two Stroke Works. Deposit applies toward
-      your project and secures scheduling for restoration or custom work.
-    </p>
-
-    <p style="font-size:13px; opacity:.7; margin-top:10px;">
-  Deposit is credited toward final build cost.
-</p>
-   
-    <div class="item-meta">
-      <span>Limited Slots</span>
-      <span>By Approval</span>
-    </div>
-
-    <div class="item-price" style="margin-top:14px; font-weight:700;">
-      $500 Deposit
-    </div>
-
-    <div class="item-actions" style="margin-top:18px;">
-      <a href="https://buy.stripe.com/test_6oU4gy3ZOdcM5QBd8o4sE01"
-         class="btn btn-primary"
-         target="_blank"
-         rel="noopener">
-        Reserve Build Slot
-      </a>
-    </div>
-  </div>
-</div>
-      
-
-</section>
-
-  
-  
+  <!-- ===================== -->
+  <!-- WORK -->
+  <!-- ===================== -->
   <section class="section section-black" id="work">
     <div class="container">
       <div class="gallery-header">
@@ -1225,9 +1001,9 @@
         </div>
 
         <div class="card">
-          <img src="TS400.JPG" alt="Suzuki TS build">
+          <img src="TS90.jpeg" alt="Suzuki TS build">
           <div class="card-body">
-            <h3 class="card-title">TS Restoration</h3>
+            <h3 class="card-title">TS Build</h3>
             <div class="card-text">
               Vintage Suzuki restoration work focused on factory feel, clean lines, and timeless character.
             </div>
@@ -1235,11 +1011,11 @@
         </div>
 
         <div class="card">
-          <img src="Parts.jpeg" alt="Suzuki Parts">
+          <img src="Parts.jpeg" alt="Suzuki parts">
           <div class="card-body">
             <h3 class="card-title">Suzuki Parts</h3>
             <div class="card-text">
-              The parts (NOS or refurbished), details, and visual identity that make a two-stroke shop feel unmistakably real.
+              The parts, refurbished details, and visual identity that make a two-stroke shop feel unmistakably real.
             </div>
           </div>
         </div>
@@ -1247,13 +1023,17 @@
     </div>
   </section>
 
+  <!-- ===================== -->
+  <!-- CONTACT -->
+  <!-- ===================== -->
   <section class="section section-dark" id="contact">
     <div class="container contact-grid">
       <div class="contact-copy">
         <div class="section-label">Contact</div>
         <h2 class="section-title">Let’s Talk About Your Vintage Suzuki Project</h2>
         <p>
-          Based in Flower Mound, Texas. Reach out for restoration work, parts, or to talk through a vintage Suzuki TS build. We offer Vapor Honing, Powder Coating and Re-chroming parts restoration services as well.
+          Based in Flower Mound, Texas. Reach out for restoration work, parts, or to talk through a vintage Suzuki TS build.
+          We also offer vapor honing, powder coating, and re-chroming parts restoration services.
         </p>
       </div>
 
@@ -1265,17 +1045,18 @@
 
         <div class="contact-item">
           <div class="contact-label">Phone</div>
-          <div class="contact-value">214.395.8786</div>
+          <div class="contact-value">
+            <a href="tel:2143958786">214.395.8786</a>
+          </div>
         </div>
 
         <div class="contact-item">
           <div class="contact-label">Email</div>
-          <a href="mailto:twostrokeworks@gmail.com" style="color: inherit; text-decoration: none;">
-            twostrokeworks@gmail.com
-          </a>
+          <div class="contact-value">
+            <a href="mailto:twostrokeworks@gmail.com">twostrokeworks@gmail.com</a>
+          </div>
         </div>
 
-        
         <div style="margin-top: 26px;">
           <a href="mailto:twostrokeworks@gmail.com" class="btn btn-primary">Email Two Stroke Works</a>
         </div>
@@ -1283,9 +1064,24 @@
     </div>
   </section>
 
+  <!-- ===================== -->
+  <!-- FOOTER -->
+  <!-- ===================== -->
   <div class="footer">
     © 2026 Two Stroke Works
   </div>
 
+  <!-- ===================== -->
+  <!-- SCROLL FIX -->
+  <!-- ===================== -->
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
 </body>
 </html>
